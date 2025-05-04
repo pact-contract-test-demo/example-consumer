@@ -4,7 +4,7 @@
 
 [![Pact Status](https://test.pactflow.io/pacts/provider/pactflow-example-provider/consumer/pactflow-example-consumer/latest/badge.svg?label=provider)](https://test.pactflow.io/pacts/provider/pactflow-example-provider/consumer/pactflow-example-consumer/latest) (latest pact)
 
-[![Can I deploy Status](https://test.pactflow.io/pacticipants/pactflow-example-consumer/branches/master/latest-version/can-i-deploy/to-environment/production/badge)](https://test.pactflow.io/pacticipants/pactflow-example-consumer/branches/master/latest-version/can-i-deploy/to-environment/production/badge)
+[![Can I deploy Status](https://test.pactflow.io/pacticipants/pactflow-example-consumer/branches/main/latest-version/can-i-deploy/to-environment/production/badge)](https://test.pactflow.io/pacticipants/pactflow-example-consumer/branches/main/latest-version/can-i-deploy/to-environment/production/badge)
 
 This is an example of a Node consumer using Pact to create a consumer driven contract, and sharing it via [PactFlow](https://pactflow.io).
 
@@ -16,7 +16,7 @@ The project uses a Makefile to simulate a very simple build pipeline with two st
   * Run tests (including the pact tests that generate the contract)
   * Publish pacts, associating the consumer version with the name of the current branch
   * Check if we are safe to deploy to prod (ie. has the pact content been successfully verified)
-* Deploy (only from master)
+* Deploy (only from main)
   * Deploy app (just pretend for the purposes of this example!)
   * Record the deployment in the Pact Broker
 

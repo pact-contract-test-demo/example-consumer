@@ -1,4 +1,4 @@
-# Why are we using a Makefile? PactFlow has around 30 example consumer and provider projects that show how to use Pact. 
+# Why are we using a Makefile? PactFlow has around 30 example consumer and provider projects that show how to use Pact.
 # We often use them for demos and workshops, and Makefiles allow us to provide a consistent language and platform agnostic interface
 # for each project. You do not need to use Makefiles to use Pact in your own project!
 
@@ -14,8 +14,8 @@ GIT_COMMIT?=$(shell git rev-parse HEAD)
 GIT_BRANCH?=$(shell git rev-parse --abbrev-ref HEAD)
 ENVIRONMENT?=production
 
-# Only deploy from master (to production env) or test (to test env)
-ifeq ($(GIT_BRANCH),master)
+# Only deploy from main (to production env) or test (to test env)
+ifeq ($(GIT_BRANCH),main)
 	ENVIRONMENT=production
 	DEPLOY_TARGET=deploy
 else
@@ -65,7 +65,7 @@ create_environment:
 deploy: deploy_app record_deployment
 
 no_deploy:
-	@echo "Not deploying as not on master branch"
+	@echo "Not deploying as not on main branch"
 
 can_i_deploy: .env
 	@echo "\n========== STAGE: can-i-deploy? ==========\n"
